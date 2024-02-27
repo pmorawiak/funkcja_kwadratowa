@@ -1,0 +1,69 @@
+import java.lang.Math;
+
+public class MyClass {
+    public static void main(String args[]) {
+  
+ 
+  
+String liczbaA = args[0];
+String liczbaB = args[1];
+String liczbaC = args[2];
+
+  System.out.println("podano liczbe A = " + liczbaA + " oraz liczbe B = " + liczbaB + " oraz liczbe C = " + liczbaC);
+  
+  int intA = Integer.parseInt(liczbaA);
+  int intB = Integer.parseInt(liczbaB);
+  int intC = Integer.parseInt(liczbaC);
+  
+  System.out.println("funkcja ma postac : " + intA + "x^2+" + intB + "x+" + intC + "=0");
+
+double delta = 0;
+
+delta = intB * intB - 4 * intA * intC;
+
+System.out.println("delta równiania to : " + delta);
+
+double x1 = 0;
+double x2 = 0;
+
+
+
+double pierwiastekDelta = 0;
+pierwiastekDelta = Math.sqrt(delta);
+
+
+System.out.println("pierwiastek z delty to : " + pierwiastekDelta);
+
+x1 = (-intB - pierwiastekDelta) / 2 * intA;
+x2 = (-intB + pierwiastekDelta) / 2 * intA;
+
+
+
+
+// przypadki delta > 0
+
+if (delta > 0)
+{
+
+System.out.println("x1 = " + x1 + " x2 = " + x2);
+
+} else if (delta == 0) 
+{
+
+double x0 = 0;
+
+x0 = (-intB) / (2*intA);
+
+System.out.println("x0 = " + x0);
+
+} else 
+
+{
+    System.out.println("brak miejsc zerowych");
+    
+}
+
+  
+}
+    
+}
